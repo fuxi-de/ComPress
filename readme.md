@@ -1,4 +1,4 @@
-# SMR Composer WP Setup
+# ComPress
 
 This is a composer based Wordpress Setup. Where the wp-content directory lives outside the actual WP Core. Wordpress and the plugins are pulled in via [Composer](https://getcomposer.org/). So having it installed is required for this to work.
 
@@ -7,8 +7,8 @@ This is a composer based Wordpress Setup. Where the wp-content directory lives o
 Clone this repository into your webroot.
 
 ```shell
-git clone git@gitlab.com:schumacher-visuell/smr_wp.git
-cd wordpress_setup/
+git@github.com:fuxi-de/ComPress.git
+cd ComPress/
 composer install
 ```
 
