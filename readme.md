@@ -7,7 +7,7 @@ This is a composer based Wordpress Setup. Where the wp-content directory lives o
 Clone this repository into your webroot.
 
 ```shell
-git@github.com:fuxi-de/ComPress.git
+git clone git@github.com:fuxi-de/ComPress.git
 cd ComPress/
 composer install
 ```
