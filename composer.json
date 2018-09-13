@@ -33,6 +33,9 @@
               "url": "https://github.com/hingst/layotter.git",
               "type": "git",
               "reference": "origin/master"
+            },
+            "require": {
+                "composer/installers": "^1.0"
             }
           }
         }
