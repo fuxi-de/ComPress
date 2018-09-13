@@ -1,0 +1,12 @@
+/public/cms
+/public/content/plugins
+/public/content/uploads
+/vendor
+production-config.php
+local-config.php
+.DS_Store
+composer.lock
+node_modules
+yarn.lock
+.htaccess
+.idea

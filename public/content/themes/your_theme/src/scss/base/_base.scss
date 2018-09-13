@@ -1,0 +1,107 @@
+html {
+  @include main-font(); // declared in typography.scss
+}
+
+main {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+a {
+  @include transition(all, ease, .35s);
+}
+
+
+// vars
+$content: 1280px;
+$content-big: 1540px;
+$content-medium: 910px;
+$content-small: 600px;
+$content-max: 1920px; // max-width for content.max
+
+// <div class="content"></div>
+[class*="content"] {
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+  position: relative;
+  padding: 0 calc(1em - 15px); // 16px;
+
+  @media ($mq-tablet) {
+    padding: 0 calc(2em - 15px); // 32px;
+  }
+  @media ($mq-desktop) {
+    padding: 0 calc(4em - 15px); // 64px;
+  }
+  @media ($mq-desktop-xl) {
+    padding: 0 calc(8em - 15px); // 128px;
+  }
+
+  // more padding (x2)
+  &[class*="-px2"] {
+    padding: 0 calc(2em - 15px); // 32px;
+
+    @media ($mq-tablet) {
+      padding: 0 calc(4em - 15px); // 64px;
+    }
+
+    @media ($mq-desktop) {
+      padding: 0 calc(8em - 15px); // 128px;
+    }
+
+    @media ($mq-desktop-xl) {
+      padding: 0 calc(12em - 15px); // 192px;
+    }
+  }
+
+  // default content classes
+  //&[class*="-big"] {
+  //  max-width: $content-big;
+  //}
+  //&[class*="-medium"] {
+  //  max-width: $content-medium;
+  //}
+  //&[class*="-small"] {
+  //  max-width: $content-small;
+  //}
+  //&[class*="-max"] {
+  //  width: 100%;
+  //  max-width: $content-max;
+  //}
+  //&[class*="-full"] {
+  //  width: 100%;
+  //  max-width: none;
+  //}
+}
+
+section {
+  width: 100%;
+  display: block;
+  position: relative;
+
+  // fullscreen sections - full viewport
+  &.fullscreen {
+
+    [class*="container"] {
+      // just the first row in the container
+      > .row {
+        height: inherit;
+
+        > [class*="col"] {
+          min-height: 100vh;
+        }
+      }
+    }
+
+    [class*="content"] {
+      height: 100%;
+      display: flex;
+
+      .align-self-center {
+        width: 100%;
+      }
+    }
+
+  }
+}

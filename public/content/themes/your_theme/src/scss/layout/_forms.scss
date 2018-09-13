@@ -1,0 +1,46 @@
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  @include transition(all, ease, .35s);
+}
+
+
+// Contactform 7
+form {
+  &.wpcf7-form {
+    input, textarea {
+      font-size: $basefontsize;
+    }
+    input {
+      &[type="text"], &[type="email"] {
+        width: 100%;
+        padding: 7px;
+        background-color: $color-white-solid;
+        border: 1px solid $color-black-solid;
+        color: $color-black-solid;
+      }
+    }
+    textarea {
+      width: 100%;
+      padding: 7px;
+      background-color: $color-white-solid;
+      border: 1px solid $color-black-solid;
+      color: $color-black-solid;
+    }
+  }
+}
+
+
+// Hide Validation Errors
+div.wpcf7-validation-errors {
+  border: none;
+}
+
+span.wpcf7-not-valid-tip {
+  display: none;
+}
+
+div.wpcf7-response-output {
+  display: none !important;
+}

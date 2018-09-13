@@ -1,0 +1,101 @@
+header {
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  height: auto;
+  z-index: 9999;
+}
+
+header#header {
+  padding: 1em 0; // 16px
+  position: fixed;
+  @include transition(transform, ease, .3s);
+  @media ($mq-tablet) {
+    padding: 2em 0; //  32px 0
+  }
+
+  svg {
+    fill: $color-white-solid;
+  }
+
+  a.logo {
+    height: auto;
+    width: auto;
+    max-width: 180px;
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 3;
+    line-height: 0;
+    overflow: hidden;
+    @include transition(width, ease, .5s);
+    @media ($mq-desktop) {
+      max-width: 230px;
+    }
+    @media ($mq-desktop-xl) {
+      max-width: 280px;
+    }
+
+    svg  {
+      width: 100%;
+      height: auto;
+      line-height: 0;
+
+      path {
+        @include transition();
+      }
+    }
+
+    &.scrolled {
+      max-width: 15px;
+
+      #balken {
+        @include translateX(-179px);
+      }
+      .hideit {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.header-up {
+    @include translateY(-100%);
+  }
+
+
+  // HEADER OVER LIGHT BACKGROUNDS
+  // icons should appear black in this case
+  &.black {
+    svg {
+      fill: $color-black-solid;
+    }
+    span {
+      background-color: $color-black-solid;
+    }
+  }
+
+}
+
+
+// NOTIFITCATION BELL
+svg#notification-bell {
+  max-height: 20px;
+  height: auto;
+  float: right;
+  margin-right: 20px;
+  position: relative;
+  z-index: 2;
+
+  @media ($mq-tablet) {
+    display: none;
+  }
+
+  &.update {
+    ellipse#notification-dot {
+      fill: $color-purple-solid;
+    }
+  }
+}

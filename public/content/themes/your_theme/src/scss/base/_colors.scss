@@ -1,0 +1,111 @@
+// Variables
+$color-white-solid: #fff;
+$color-black-solid: #000;
+
+$color-darkgrey-solid: #333;
+$color-grey-solid: #cacaca;
+$color-grey-light: #f1f1f1;
+
+$color-purple-solid: #2B1AA7;
+$color-ylw-solid: #FFED00;
+$color-ylw-light: #FFFAC7;
+
+
+// Lists
+$colors: (
+  $color-white-solid,
+  $color-black-solid,
+  $color-darkgrey-solid,
+  $color-grey-solid,
+  $color-grey-light,
+  $color-purple-solid,
+  $color-ylw-solid,
+  $color-ylw-light
+);
+
+$colorNames: (
+  'white-solid',
+  'black-solid',
+  'darkgrey-solid',
+  'grey-solid',
+  'grey-light',
+  'purple-solid',
+  'ylw-solid',
+  'ylw-light'
+);
+
+
+$colorsLength: length($colors);
+$colorNamesLength: length($colorNames);
+
+
+// Function to create color-classes
+// e.g.
+// .color-blue-solid {
+//    color: @color-blue-solid;
+// }
+@for $i from 1 through $colorNamesLength {
+
+  $colorNaming: nth($colorNames, $i);
+  $colorHEX: nth($colors, $i);
+
+  .color-#{$colorNaming}  {
+    color: $colorHEX;
+  }
+
+  svg.color-#{$colorNaming}  {
+    fill: $colorHEX;
+  }
+
+}
+
+// Function to create background-color-classes
+// e.g.
+// .color-bg-blue-solid {
+//    color: @color-blue-solid;
+// }
+@for $i from 1 through $colorNamesLength {
+
+  $colorNaming: nth($colorNames, $i);
+  $colorHEX: nth($colors, $i);
+
+  .color-bg-#{$colorNaming} {
+    background-color: $colorHEX;
+
+    // text should be white on dark backgrounds
+    @if $colorNaming == 'black-solid' {
+      color: $color-white-solid;
+    } @else if $colorNaming == 'red-solid' {
+      color: $color-white-solid;
+    } @else if $colorNaming == 'purple-solid' {
+      color: $color-white-solid;
+    } @else if $colorNaming == 'darkgrey-solid' {
+      color: $color-white-solid;
+    }
+  }
+
+}
+
+
+
+// Function to create INSET-BORDER Classes
+// e.g.
+// .border-inset-blue-solid {
+//    box-shadow: inset 0 0 0 10px $color-purple-solid;
+// }
+@for $i from 1 through $colorNamesLength {
+
+  $colorNaming: nth($colorNames, $i);
+  $colorHEX: nth($colors, $i);
+
+  .border-inset-#{$colorNaming}  {
+    box-shadow: inset 0 0 0 1em $colorHEX;
+    @media ($mq-tablet) {
+      box-shadow: inset 0 0 0 1.5em $colorHEX;
+    }
+    @media ($mq-desktop-xl) {
+      box-shadow: inset 0 0 0 2em $colorHEX;
+    }
+  }
+
+}

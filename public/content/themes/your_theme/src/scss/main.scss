@@ -1,0 +1,79 @@
+/*
+Theme Name: SMR Setup
+Theme URI: --
+Author: CMB
+Author URI:
+Description: SMR Project-Setup
+Version: 1.1
+*/
+
+/**************************
+==== Table of Content ====
+==========================
+1. Dependencies from node_modules
+2. CSS RESET
+3. Mixins
+4. Font imports
+5. Colors
+6. Base Styling (html, main, section, ...)
+7. Typography
+8. Utility Classes
+9. Imports (layout, partials)
+10. Import Modules from template-directory
+
+IMPORTS
+**************************/
+
+//////// 1. Variables ////////
+$mq-desktop-xl: "min-width: 1920px"; // usage: @media ($mq-desktop-xl) { ... }
+$mq-desktop: "min-width: 1280px"; // usage: @media ($mq-desktop) { ... }
+$mq-tablet: "min-width: 768px"; // usage: @media ($mq-tablet) { ... }
+
+$basefontsize: 16px;
+$lineheight-p: 1.6em;
+
+/////// 1. DEPENDENCIES ///////
+@import "../../node_modules/bootstrap/scss/bootstrap-grid"; // Bootstrap v4.0.0 Fluidgrid
+@import "../../node_modules/flickity/dist/flickity"; // Flickity.css (Slider)
+
+/////// 2. CSS RESET ////////
+// resets
+@import "base/reset";
+
+/////// 3. MIXINS ////////
+@import "base/mixins";
+
+/////// 4. Font Imports ////////
+// fonts are imported here
+@import "base/font-imports";
+
+/////// 5. COLORS ////////
+// Colors are defined here
+@import "base/colors";
+
+/////// 6. Basics ///////
+@import "base/base"; // GENERAL STYLINGS FOR ALL MQ's - html, body, setion, main, a ...
+
+/////// 7. TYPOGRAPHY ////////
+// fonts are imported here
+@import "base/typography";
+
+/////// 8. Utility Classes ///////
+// basic classes to use (e.g. .bold = font-weight: bold)
+@import "base/utility-classes";
+
+// 9. Imports
+// layout
+@import "layout/nav"; // Header & Navigation
+@import "layout/header"; // Header & Navigation
+@import "layout/footer"; // Footer
+@import "layout/forms"; // Forms
+
+// partials
+@import "partials/buttons"; // Buttons
+@import "partials/keyframes"; // Keyframe Animations
+@import "partials/cookie-notice"; // Keyframe Animations
+@import "partials/icons"; // Keyframe Animations
+
+/////// 10. Import Modules ///////
+@import "../../templates/modules/**/*"; // Import all scss-files from the modules directory

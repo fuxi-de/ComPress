@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+		<symbol id="smr-icon_arrow_down_black" viewBox="0 0 100 100">
+			<path d="M0 23.2v28.6l49.6 25.1L100 51.3V23.2c-16.8 8.5-33.5 16.9-50.3 25.4-16.6-8.5-33.1-17-49.7-25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_down_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M0 23.2v28.6l49.6 25.1L100 51.3V23.2c-16.8 8.5-33.5 16.9-50.3 25.4-16.6-8.5-33.1-17-49.7-25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_left_black" viewBox="0 0 100 100">
+			<path d="M76.8 0H48.2l-25 49.6L48.7 100h28.1c-8.5-16.8-16.9-33.5-25.4-50.3 8.5-16.6 17-33.1 25.4-49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_left_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M76.8 0H48.2l-25 49.6L48.7 100h28.1c-8.5-16.8-16.9-33.5-25.4-50.3 8.5-16.6 17-33.1 25.4-49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_right_black" viewBox="0 0 100 100">
+			<path d="M48.6 49.7c-8.5 16.8-17 33.5-25.4 50.3h28.1l25.5-50.4L51.8 0H23.2c8.4 16.6 16.9 33.1 25.4 49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_right_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M48.6 49.7c-8.5 16.8-17 33.5-25.4 50.3h28.1l25.5-50.4L51.8 0H23.2c8.4 16.6 16.9 33.1 25.4 49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_up_black" viewBox="0 0 100 100">
+			<path d="M100 76.8V48.2l-49.6-25L0 48.7v28.1c16.8-8.5 33.5-16.9 50.3-25.4 16.6 8.5 33.1 17 49.7 25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_up_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M100 76.8V48.2l-49.6-25L0 48.7v28.1c16.8-8.5 33.5-16.9 50.3-25.4 16.6 8.5 33.1 17 49.7 25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_close_black" viewBox="0 0 100 100">
+			<path d="M100 21.1L78.9 0 50 28.9 21.1 0 0 21.1 28.9 50 0 78.9 21.1 100 50 71.1 78.9 100 100 78.9 71.1 50"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_close_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M100 21.1L78.9 0 50 28.9 21.1 0 0 21.1 28.9 50 0 78.9 21.1 100 50 71.1 78.9 100 100 78.9 71.1 50"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_plus_black" viewBox="0 0 100 100">
+			<path d="M100 63.3V36.7H63.3V0H36.7v36.7H0v26.6h36.7V100h26.6V63.3"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_plus_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M100 63.3V36.7H63.3V0H36.7v36.7H0v26.6h36.7V100h26.6V63.3"></path>
+		</symbol>
+	
+</svg>

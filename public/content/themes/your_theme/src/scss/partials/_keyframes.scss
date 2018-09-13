@@ -1,0 +1,162 @@
+// NAVIGATION ANIMATION FOR <ul>
+@keyframes vanishIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.3, 1.3);
+    visibilty: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+    visibilty: visible;
+  }
+}
+
+@keyframes vanishIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3, 1.3);
+    visibilty: hidden;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    visibilty: visible;
+  }
+}
+
+
+@keyframes vanishOut {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+    visibilty: visible;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1, 1.1);
+    visibilty: hidden;
+  }
+}
+
+@keyframes vanishOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    visibilty: visible;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.1, 1.1);
+    visibilty: hidden;
+  }
+}
+
+
+// Slide Down
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+// slide up
+@-webkit-keyframes slideUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+// Zoom Effect
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.95, .95, .95);
+    transform: scale3d(.95, .95, .95);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.95, .95, .95);
+    transform: scale3d(.95, .95, .95);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: .35s;
+  animation-duration: .35s;
+}
+
+
+// SlideDown is used for the Main-Mavigation
+// This is used as MIXIN
+.slideDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  -webkit-animation-duration: .35s;
+  animation-duration: .35s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

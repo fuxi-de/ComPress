@@ -1,0 +1,91 @@
+// Gotham gets imported in the <head> (cloud-hosted)
+// font-family: "Gotham A", "Gotham B";
+
+// Averta LIGHT
+@font-face {
+  font-family: 'Averta';
+  src: url('../../assets/fonts/averta/averta-light-webfont.woff2') format('woff2'),
+  url('../../assets/fonts/averta/averta-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Averta BOLD
+@font-face {
+  font-family: 'Averta';
+  src: url('../../assets/fonts/averta/avertacy-bold-webfont.woff2') format('woff2'),
+  url('../../assets/fonts/averta/avertacy-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Tiempos BOLD
+@font-face {
+  font-family: 'Tiempos';
+  src: url('../../assets/fonts/tiempos/TiemposHeadlineWeb-LightItalic.eot') format('eot');
+  src: url('../../assets/fonts/tiempos/TiemposHeadlineWeb-LightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/tiempos/TiemposHeadlineWeb-LightItalic.woff2') format('woff2'),
+  url('../../assets/fonts/tiempos/TiemposHeadlineWeb-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+// Tiempos Light
+@font-face {
+  font-family: 'Tiempos';
+  src: url('../../assets/fonts/tiempos/TiemposHeadlineWeb-BoldItalic.eot') format('eot');
+  src: url('../../assets/fonts/tiempos/TiemposHeadlineWeb-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/tiempos/TiemposHeadlineWeb-BoldItalic.woff2') format('woff2'),
+  url('../../assets/fonts/tiempos/TiemposHeadlineWeb-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+// font mixins
+@mixin font-averta-light-normal() {
+  font-family: 'Averta', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin font-averta-bold-normal() {
+  font-family: 'Averta', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin font-tiempos-light-italic() {
+  font-family: 'Tiempos', serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+@mixin font-tiempos-bold-italic() {
+  font-family: 'Tiempos', serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+// font-classes
+.font-averta-light-normal {
+  @include font-averta-light-normal();
+}
+
+.font-averta-bold-normal {
+  @include font-averta-bold-normal();
+}
+
+.font-tiempos-light-italic {
+  @include font-tiempos-light-italic();
+}
+
+.font-tiempos-bold-italic {
+  @include font-tiempos-bold-italic();
+}
+
+// used by html/body
+@mixin main-font() {
+  @include font-averta-light-normal();
+}

@@ -1,0 +1,28 @@
+footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Global Footer
+footer#footer {
+  padding: 3em 0; // 48px 0
+
+  @media ($mq-tablet) {
+    padding: 4em 0; // 64px 0
+  }
+
+  nav {
+    margin-bottom: 3.5em; // 56px
+  }
+
+  #copyright {
+    font-size: 1em; // 16px
+    line-height: 1;
+    letter-spacing: .3px;
+
+    @media ($mq-desktop-xl) {
+      font-size: 1.125em; // 18px
+    }
+
+  }
+}

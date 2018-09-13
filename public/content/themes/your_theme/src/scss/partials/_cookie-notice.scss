@@ -1,0 +1,47 @@
+#cookie-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  background-color: $color-black-solid;
+  color: $color-white-solid;
+  -webkit-animation-name: slideUp;
+  animation-name: slideUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  @include transition();
+
+  p {
+    max-width: 50%;
+    margin: 0;
+    @media only screen and (min-width : 375px) {
+      max-width: 57%;
+    }
+    @media ($mq-tablet) {
+      max-width: none;
+      margin: 7px 0 0 0;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color-white-solid;
+  }
+
+  button {
+    border: 1px solid $color-white-solid;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: $color-black-solid;
+
+    @media ($mq-tablet) {
+      padding: 10px 20px;
+    }
+  }
+}

@@ -1,0 +1,229 @@
+// CSS RESET
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  -webkit-padding-end: 0px;
+}
+
+html {
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  font-size: $basefontsize;
+  line-height: 1;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, section {
+  display: block;
+  position: relative;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  -webkit-padding-end: 0px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  -webkit-padding-end: 0px;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+p {
+  line-height: $lineheight-p;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  position: relative;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  td {
+    vertical-align: top;
+    font-weight: normal;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+
+  // cant select images
+  // more difficult to save images
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -ms-touch-callout: none;
+  -moz-touch-callout: none;
+  touch-callout: none;
+}
+
+
+a {
+  text-decoration: none;
+  position: relative;
+  &:hover, &:focus, &:active  {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+  }
+  &[role="button"] {
+    text-align: center;
+    line-height: 1.2em;
+  }
+}
+
+input, textarea {
+  border-radius: 0; // Negate Iphone round borders for inputs fields
+  -webkit-appearance: none;
+  font: inherit;
+  &:focus {
+    outline: 0;
+  }
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  border-radius: 0;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  display: inline-block;
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Remove the outline/glow in Webkit */
+:focus {
+  outline: 0;
+}
+
+/* Make webkit render the search and text input like a normal text field */
+input[type="search"], input[type="text"] {
+  -webkit-appearance:textfield;
+  -webkit-box-sizing:content-box;
+  background: #fff;
+  border: none;
+  padding: 0;
+  font: inherit;
+  &:hover {
+    cursor: text;
+  }
+}
+
+// Hide Placeholder when Click in Textfield (Forms)
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input:focus:-moz-input-placeholder, textarea:focus:-moz-input-placeholder{
+  opacity: 0;
+}
+
+input:focus::-moz-input-placeholder, textarea:focus::-moz-input-placeholder{
+  opacity: 0;
+}
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+// No Backgroundcolor für Autofill-Options
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display:none;
+}

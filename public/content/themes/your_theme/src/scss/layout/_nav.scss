@@ -1,0 +1,217 @@
+// navigation menu
+nav {
+  width: 100%;
+  position: relative;
+  display: block;
+  font-size: .75em; // 12px
+  font-weight: 700;
+  @media ($mq-tablet) {
+    font-size: 1em; // 16px
+  }
+  @media ($mq-desktop-xl) {
+    font-size: 1.125em; // 18px
+  }
+
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 .875em; // 0 14px
+      @media ($mq-tablet) {
+        margin: 0 1.5em; // 0 24px
+      }
+      @media ($mq-desktop-xl) {
+        margin: 0 1.75em; // 0 28px
+      }
+      &:first-of-type {
+        margin-left: 0 !important;
+      }
+      &:last-of-type {
+        margin-right: 0 !important;
+      }
+
+      a {
+        color: $color-white-solid;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        &:after {
+          content: '';
+          width: 0em; // 16px
+          height: 3px;
+          background-color: $color-white-solid;
+          display: block;
+          position: absolute;
+          left: 0%;
+          bottom: -.25em; // 4px
+          @include transition(all, ease, .35s);
+        }
+
+        &:hover {
+          &:after {
+            content: '';
+            width: 1em; // 16px
+            left: 50%;
+            @include translateX(-50%);
+          }
+        }
+
+      }
+
+      // highlight current page
+      &.current_page_item {
+        a {
+          color: $color-purple-solid;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+nav#main-nav {
+  position: fixed;
+  padding: 0;
+  background-color: $color-purple-solid;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0vh;
+  font-size: 1.5em; // 24px;
+  @include transition(height, ease, .35s);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+
+  @media ($mq-desktop) {
+    position: relative;
+    padding: 5px 0;
+    background-color: transparent;
+    left: auto;
+    float: right;
+    width: auto;
+    height: auto;
+    font-size: 1em; // 16px
+  }
+  @media ($mq-desktop-xl) {
+    padding: 7px 0;
+    font-size: 1.125em; // 18px
+  }
+
+  ul {
+    position: relative;
+    margin: 130px auto 0;
+    text-align: left;
+    transform-origin: 50% 50%;
+    visibility: hidden;
+    max-width: 90%;
+    -webkit-animation: vanishOut .5s ease;
+    -ms-animation: vanishOut .5s ease;
+    animation: vanishOut .5s ease;
+    @media ($mq-desktop) {
+      text-align: right;
+      display: block;
+      animation: none;
+      visibility: visible;
+      margin: 0;
+      max-width: none;
+    }
+
+    &.active {
+      visibility: visible;
+      -webkit-animation: vanishIn .5s ease;
+      -wms-animation: vanishIn .5s ease;
+      animation: vanishIn .5s ease;
+    }
+
+    li {
+      margin: 1em 0;
+      display: block;
+      @media ($mq-desktop) {
+        display: inline-block;
+        margin: 0 1.5em; // 0 24px
+      }
+      @media ($mq-desktop-xl) {
+        margin: 0 1.75em; // 0 28px
+      }
+
+    }
+
+  }
+}
+
+// BURGER-ICON
+#navbar-toggle {
+  width: 1.25em; // 20px
+  height: 1.125em; // 18px
+  position: relative;
+  float: right;
+  z-index: 2;
+  @media ($mq-desktop) {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    height: .25em; // 4px
+    width: 100%;
+    background: $color-white-solid;
+    border-radius: 0;
+    opacity: 1;
+    left: 0;
+    @include transition(all, ease-in-out, .25s);
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      top: 7px;
+    }
+    &:nth-child(4) {
+      top: 14px;
+    }
+  }
+
+}
+
+// BURGER-ICON TRANSFORMATION TO CLOSE-ICON (X)
+#navbar-toggle.open {
+
+  span {
+    background-color: $color-white-solid;
+
+    &:nth-child(1) {
+      top: 15px;
+      width: 0%;
+      left: 50%;
+    }
+
+    &:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(4) {
+      top: 16px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+
+}

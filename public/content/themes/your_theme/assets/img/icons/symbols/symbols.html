@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <title>Icon kit preview | gulp-svg-sprites</title>
+    <link href="css/sprite.css" rel="stylesheet" type="text/css" media="all"/>
+    <style type="text/css">@CHARSET "UTF-8";
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+        color: #666;
+        background: #fafafa;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        line-height: 1.4
+    }
+
+    header {
+        display: block;
+        padding: 3em 3em 2em 3em;
+        background-color: #fff
+    }
+
+    header p {
+        margin: 0 0 0 0;
+    }
+
+    nav {
+        font-size: .7em;
+        display: block;
+        width: 100%;
+        margin: 0 0 2em 0
+    }
+
+    nav a {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 2em;
+        color: #0f7595;
+        white-space: nowrap
+    }
+
+    nav a:hover {
+        text-decoration: underline
+    }
+
+    nav a.current {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #666
+    }
+
+    section {
+        border-top: 1px solid #eee;
+        padding: 2em 3em 0 3em
+    }
+
+    ul {
+        margin: 0;
+        padding: 0
+    }
+
+    .icon-boxes li {
+        display: inline-block;
+        background-color: #fff;
+        position: relative;
+        margin: 0 2em 2em 0;
+        vertical-align: top;
+        border: 1px solid #ccc;
+        padding: 1em 1em 1em 1em;
+        cursor: default
+    }
+
+    .icon-box {
+        margin: 0;
+        width: 144px;
+        height: 144px;
+        position: relative;
+        background: #ccc url(data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=) top left repeat;
+        border: 1px solid #ccc;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center
+    }
+    .icon-box.inverted {
+        background: black;
+    }
+
+    .icon {
+        display: inline;
+        display: inline-block
+    }
+
+    .snippet-popover {
+        position: absolute;
+        display: none;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 16px;
+        z-index: 1;
+        transition: all .3s;
+    }
+    .snippet-popover.active {
+        display: block;
+        opacity: 1;
+    }
+
+    pre {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 5px 0;
+        font-size: 1em;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    footer {
+        display: block;
+        margin: 0;
+        padding: 0 3em 3em 3em
+    }
+
+    footer p {
+        margin: 0;
+        font-size: .7em
+    }
+
+    footer a {
+        color: #0f7595;
+        margin-left: 0
+    }
+    </style>
+
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+		<symbol id="smr-icon_arrow_down_black" viewBox="0 0 100 100">
+			<path d="M0 23.2v28.6l49.6 25.1L100 51.3V23.2c-16.8 8.5-33.5 16.9-50.3 25.4-16.6-8.5-33.1-17-49.7-25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_down_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M0 23.2v28.6l49.6 25.1L100 51.3V23.2c-16.8 8.5-33.5 16.9-50.3 25.4-16.6-8.5-33.1-17-49.7-25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_left_black" viewBox="0 0 100 100">
+			<path d="M76.8 0H48.2l-25 49.6L48.7 100h28.1c-8.5-16.8-16.9-33.5-25.4-50.3 8.5-16.6 17-33.1 25.4-49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_left_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M76.8 0H48.2l-25 49.6L48.7 100h28.1c-8.5-16.8-16.9-33.5-25.4-50.3 8.5-16.6 17-33.1 25.4-49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_right_black" viewBox="0 0 100 100">
+			<path d="M48.6 49.7c-8.5 16.8-17 33.5-25.4 50.3h28.1l25.5-50.4L51.8 0H23.2c8.4 16.6 16.9 33.1 25.4 49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_right_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M48.6 49.7c-8.5 16.8-17 33.5-25.4 50.3h28.1l25.5-50.4L51.8 0H23.2c8.4 16.6 16.9 33.1 25.4 49.7z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_up_black" viewBox="0 0 100 100">
+			<path d="M100 76.8V48.2l-49.6-25L0 48.7v28.1c16.8-8.5 33.5-16.9 50.3-25.4 16.6 8.5 33.1 17 49.7 25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_arrow_up_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M100 76.8V48.2l-49.6-25L0 48.7v28.1c16.8-8.5 33.5-16.9 50.3-25.4 16.6 8.5 33.1 17 49.7 25.4z"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_close_black" viewBox="0 0 100 100">
+			<path d="M100 21.1L78.9 0 50 28.9 21.1 0 0 21.1 28.9 50 0 78.9 21.1 100 50 71.1 78.9 100 100 78.9 71.1 50"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_close_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M100 21.1L78.9 0 50 28.9 21.1 0 0 21.1 28.9 50 0 78.9 21.1 100 50 71.1 78.9 100 100 78.9 71.1 50"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_plus_black" viewBox="0 0 100 100">
+			<path d="M100 63.3V36.7H63.3V0H36.7v36.7H0v26.6h36.7V100h26.6V63.3"></path>
+		</symbol>
+	
+		<symbol id="smr-icon_plus_white" viewBox="0 0 100 100">
+			<path fill="#fff" d="M100 63.3V36.7H63.3V0H36.7v36.7H0v26.6h36.7V100h26.6V63.3"></path>
+		</symbol>
+	
+</svg>
+
+<header>
+    <h1 id="logo">Gulp SVG Sprites <small>(12 icons in &lt;symbol&gt; mode)</small></h1>
+    <h4>Files Generated:</h4>
+    <ol>
+        <li><a href="svg/symbols.svg">svg/symbols.svg</a></li>
+    </ol>
+    <h4>Usage:</h4>
+    <ol>
+        <li>
+            Include the <strong>contents</strong> of the <a href="svg/symbols.svg">SVG file</a> just after the opening <code>&lt;body&gt;</code> tag.
+        </li>
+        <li>
+            Paste one of the snippets anywhere into your website.
+        </li>
+    </ol>
+
+</header>
+<section>
+    <ul class="icon-boxes">
+        
+
+        <li title="smr-icon_arrow_down_black">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_down_black">
+                <svg class="icon smr-icon_arrow_down_black">
+                    <use xlink:href="#smr-icon_arrow_down_black" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_down_black</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_down_black')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_down_black')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_down_black">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_down_black&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_down_black&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_arrow_down_white">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_down_white">
+                <svg class="icon smr-icon_arrow_down_white">
+                    <use xlink:href="#smr-icon_arrow_down_white" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_down_white</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_down_white')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_down_white')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_down_white">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_down_white&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_down_white&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_arrow_left_black">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_left_black">
+                <svg class="icon smr-icon_arrow_left_black">
+                    <use xlink:href="#smr-icon_arrow_left_black" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_left_black</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_left_black')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_left_black')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_left_black">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_left_black&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_left_black&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_arrow_left_white">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_left_white">
+                <svg class="icon smr-icon_arrow_left_white">
+                    <use xlink:href="#smr-icon_arrow_left_white" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_left_white</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_left_white')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_left_white')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_left_white">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_left_white&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_left_white&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_arrow_right_black">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_right_black">
+                <svg class="icon smr-icon_arrow_right_black">
+                    <use xlink:href="#smr-icon_arrow_right_black" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_right_black</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_right_black')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_right_black')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_right_black">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_right_black&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_right_black&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_arrow_right_white">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_right_white">
+                <svg class="icon smr-icon_arrow_right_white">
+                    <use xlink:href="#smr-icon_arrow_right_white" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_right_white</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_right_white')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_right_white')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_right_white">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_right_white&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_right_white&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_arrow_up_black">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_up_black">
+                <svg class="icon smr-icon_arrow_up_black">
+                    <use xlink:href="#smr-icon_arrow_up_black" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_up_black</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_up_black')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_up_black')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_up_black">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_up_black&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_up_black&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_arrow_up_white">
+            <div class="icon-box" id="icon-box-smr-icon_arrow_up_white">
+                <svg class="icon smr-icon_arrow_up_white">
+                    <use xlink:href="#smr-icon_arrow_up_white" />
+                </svg>
+            </div>
+            <h2>smr-icon_arrow_up_white</h2>
+            <button onclick="showPopover('snippet-smr-icon_arrow_up_white')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_arrow_up_white')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_arrow_up_white">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_arrow_up_white&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_arrow_up_white&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_close_black">
+            <div class="icon-box" id="icon-box-smr-icon_close_black">
+                <svg class="icon smr-icon_close_black">
+                    <use xlink:href="#smr-icon_close_black" />
+                </svg>
+            </div>
+            <h2>smr-icon_close_black</h2>
+            <button onclick="showPopover('snippet-smr-icon_close_black')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_close_black')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_close_black">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_close_black&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_close_black&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_close_white">
+            <div class="icon-box" id="icon-box-smr-icon_close_white">
+                <svg class="icon smr-icon_close_white">
+                    <use xlink:href="#smr-icon_close_white" />
+                </svg>
+            </div>
+            <h2>smr-icon_close_white</h2>
+            <button onclick="showPopover('snippet-smr-icon_close_white')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_close_white')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_close_white">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_close_white&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_close_white&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_plus_black">
+            <div class="icon-box" id="icon-box-smr-icon_plus_black">
+                <svg class="icon smr-icon_plus_black">
+                    <use xlink:href="#smr-icon_plus_black" />
+                </svg>
+            </div>
+            <h2>smr-icon_plus_black</h2>
+            <button onclick="showPopover('snippet-smr-icon_plus_black')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_plus_black')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_plus_black">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_plus_black&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_plus_black&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="smr-icon_plus_white">
+            <div class="icon-box" id="icon-box-smr-icon_plus_white">
+                <svg class="icon smr-icon_plus_white">
+                    <use xlink:href="#smr-icon_plus_white" />
+                </svg>
+            </div>
+            <h2>smr-icon_plus_white</h2>
+            <button onclick="showPopover('snippet-smr-icon_plus_white')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-smr-icon_plus_white')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-smr-icon_plus_white">
+                <pre><code>&lt;svg class=&quot;icon smr-icon_plus_white&quot;&gt;&lt;use xlink:href=&quot;#smr-icon_plus_white&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+    </ul>
+</section>
+<footer>
+    <p>Generated by <a href="https://github.com/shakyshane/gulp-svg-sprites">Gulp Svg Sprites</a> - Preview page courtesy of <a href="http://iconizr.com" target="_blank">iconizr</a>.</p>
+</footer>
+<script type="text/javascript">
+    var openSnippet;
+    function showPopover(id) {
+        openSnippet = document.getElementById(id);
+        openSnippet.classList.add("active");
+    }
+    function hidePopover() {
+
+        openSnippet.classList.remove("active");
+    }
+    function invertBackground(id) {
+        var elem = document.getElementById(id);
+        elem.classList.toggle("inverted");
+    }
+</script>
+</body>
+</html>

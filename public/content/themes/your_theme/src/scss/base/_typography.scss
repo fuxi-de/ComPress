@@ -1,0 +1,72 @@
+/******* Begin styling *******/
+
+h1 {
+  font-size: 2.5em; // 40px
+  line-height: 1.25em;
+  margin: .75em 0; // 24px 0
+  font-weight: 700;
+
+  &.font-tiempos {
+    @include font-tiempos-bold-italic();
+  }
+
+  @media ($mq-tablet) {
+    font-size: 3em; // 48px
+  }
+  @media ($mq-desktop) {
+    font-size: 4em; // 64px
+  }
+  @media ($mq-desktop-xl) {
+    font-size: 5.5em; // 88px
+  }
+}
+
+h2 {
+  font-size: 2em; // 32px
+  line-height: 1.25em;
+  margin: .75em 0; // 18px 0
+  font-weight: 700;
+
+  @media ($mq-tablet) {
+    font-size: 2.25em; // 36px
+  }
+  @media ($mq-desktop) {
+    font-size: 3em; // 48px
+  }
+  @media ($mq-desktop-xl) {
+    font-size: 4em; // 64px
+  }
+}
+
+h3 {
+  font-size: 1.25em; // 20px
+  margin: 1em 0; // 20px 0
+
+  @media ($mq-tablet) {
+    font-size: 1.5em; // 24px
+  }
+}
+
+h4 {
+  font-size: 1em; // 16px
+  margin: 1em 0; // 12px 0
+}
+
+p {
+  font-size: 1em; // 16px
+  line-height: 1.5em;
+  margin: 1em 0 1.5em; // 16px 0 24px
+  letter-spacing: .5px;
+
+  @media ($mq-tablet) {
+    font-size: 1.125em; // 18px
+  }
+
+  @media ($mq-desktop) {
+    font-size: 1.375em; // 22px
+  }
+
+  @media ($mq-desktop-xl) {
+    font-size: 1.375em; // 22px
+  }
+}

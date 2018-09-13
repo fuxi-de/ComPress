@@ -1,0 +1,16 @@
+<header id="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="content">
+          <nav id="main-nav">
+            {% include "menu.twig" with {'menu' : menu.get_items} %}
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main role="main">

@@ -1,0 +1,108 @@
+/******** WIDTH AND HEIGHTS ******/
+.h-100 {
+  height: 100%
+}
+
+.vh-100 {
+  height: 100vh
+}
+
+/******** POSITIONING *********/
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.push-right {
+  float: right;
+}
+
+.push-left {
+  float: left;
+}
+
+.push-center {
+  margin: 0 auto;
+}
+
+.v-align {
+  @include v-align();
+}
+
+.h-align {
+  @include h-align();
+}
+
+.vh-align {
+  @include vh-align();
+}
+
+
+// NEGATE MARGINS
+.nomargin {
+  margin: 0;
+}
+
+.nomargin-bot {
+  margin-bottom: 0px !important;
+}
+
+.nomargin-top {
+  margin-top: 0 !important;
+}
+
+// NEGATE PADDINGS
+.nopadding {
+  padding: 0 !important;
+}
+
+.nopadding-top {
+  padding-top: 0 !important;
+}
+
+.nopadding-bot {
+  padding-bottom: 0 !important;
+}
+
+
+// TEXT MANIPULATION
+.regular {
+  font-weight: normal !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.nocase {
+  text-transform: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.clear {
+  clear:both;
+}
+
+.noscroll {
+  overflow: hidden !important;
+}
+
+
