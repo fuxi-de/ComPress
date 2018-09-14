@@ -84,7 +84,7 @@ The corresponding *.twig* File for the frontend view would look something like t
 </div>
 ```
 
-Timber will render the specified *.twig* File using _$fields_ as context. 
+Timber will render the specified *.twig* File using **$fields** as context. 
 
 ## Config
 
