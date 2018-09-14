@@ -51,7 +51,9 @@ The compiled assets which can be included in your site are then placed in __/dis
 
 This is where Layotter enters the stage! By using Layotter we are able to take a more modular approach when developing and also content creation with the page builder will be much easier and slicker. If you want to dive deeper into how exactly Layotter works take a look at its documentation [here](http://docs.layotter.com/). Basically it takes a defined by slug ACF Fieldgroup, returns a frontend view and a view for the Wordpress admin panel and remembers those as a module.
 
-We will combine this with Timber and let Timber do the rendering of those views. Therefore a module will consist at least of a *.php* file to do all the logic and register the Layotter element and also of a corresponding *.twig* file which we call from timbers ::render function. We could also include another *.twig* file for the admin view. The modules are placed under __templates/modules__ and a *layotter.php* file will most likely look something like this:
+We will combine this with Timber and let Timber do the rendering of those views. Therefore a module will consist at least of a *.php* file to do all the logic and register the Layotter element and also of a corresponding *.twig* file which we call from timbers ::render function in the *.php* file. We could also include another *.twig* file for the admin view.
+
+The modules are placed under __templates/modules__ and a *layotter.php* file will most likely look something like this:
 
 ```php
 <?php
@@ -76,6 +78,7 @@ class Quote_Element extends Layotter_Element
 Layotter::register_element('quote', 'Quote_Element');
 ```
 
+
 The corresponding *.twig* File for the frontend view would look something like this:
 
 ```html
@@ -84,10 +87,10 @@ The corresponding *.twig* File for the frontend view would look something like t
 </div>
 ```
 
-Timber will render the specified *.twig* File using **$fields** as context. 
+Timber will render the specified *.twig* File using __$fields__ as context. __$fields__ is an array consisting of the fields specified in the ACF fieldgroup we told Layotter to use for the module. The key will always be the slug of the fieldgroup and the value its given value of course. In the *.twig* File you can access this value through its given key from the __$fields__ array. __Of course these values could be modified before passing them to the view__.
 
-## Config
+## Config and Deployment
 
 On the root of the repository you can find a file named __production-config.php.sample__ by default this wordpress installation is configured to look for a config file called __local-config.php__ so just go ahead and rename the given file to that and insert your DB credentials etc.
 
-If you are going to deploy what you've build you need to remove the __.sample__ flag on the server for wordpress to use the __production-config.php__. Of course you should add the production DB credentials in that file first. Also you need to edit the __/public/wp-config.php__ to hold the correct path in line __10__.
+If you are going to deploy what you've build you need to remove the __.sample__ flag on the server for Wordpress to use the __production-config.php__. Of course you should add the production DB credentials in that file first. Also you need to edit the __/public/wp-config.php__ to hold the correct path in line __10__. This will be automated in the future.
