@@ -47,6 +47,35 @@ gulp watch
 
 The compiled assets which can be included in your site are then placed in __/dist__.
 
+### The modular Approach
+
+This is where Layotter enters the stage! By using Layotter we are able to take a more modular approach when developing and also content creation with the page builder will be much easier and slicker. If you want to dive deeper into how exactly Layotter works take a look at its documentation [here](http://docs.layotter.com/). Basically it takes a defined by slug ACF Fieldgroup, returns a frontend view and a view for the Wordpress admin panel and remembers those as a module.
+
+We will combine this with Timber and let Timber do the rendering of those views. Therefore a module will consist at least of a *.php* file to do all the logic and register the Layotter element and also of a corresponding *.twig* file which we call from timbers ::render function. We could also include another *.twig* file for the admin view. The modules are placed under __templates/modules__ and a *layotter.php* file will most likely look something like this:
+
+```shell
+<?php
+class Quote_Element extends Layotter_Element
+{
+    protected function attributes() {
+        $this->title       = 'Quote';
+        $this->description = 'Quote Element mit einem Kreis als Hintergrund';
+        $this->icon        = 'font';
+        $this->field_group = 'group_5b96829569b7d';
+    }
+
+    protected function frontend_view($fields) {
+      Timber::render('quote.twig', $fields);
+    }
+
+    protected function backend_view($fields) {
+      Timber::render('quote.twig', $fields);
+    }
+}
+
+Layotter::register_element('quote', 'Quote_Element');
+```
+
 
 ## Config
 
