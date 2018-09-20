@@ -1,23 +1,14 @@
 {
-  "name": "smr",
+  "name": "theme",
   "version": "1.0.0",
-  "description": "smr dependencies",
-  "main": "index.js",
-  "author": "cmb",
+  "description": "theme dependencies",
+  "author": "Florian Schildwaechter",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "flickity": "^2.0.10",
-    "html5shiv": "^3.7.3",
-    "jquery-touchswipe": "^1.6.18",
-    "jquery-visible": "^1.2.0",
-    "lazysizes": "^4.0.1",
-    "picturefill": "^3.0.2",
-    "respond.js": "^1.4.2",
-    "svg4everybody": "^2.1.9"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/schumacher-visuell/yarn.git"
+    "browserify": "^15.0.0",
+    "hamburgers": "^0.9.3",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.1"
   }
 }
