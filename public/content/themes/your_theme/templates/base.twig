@@ -7,11 +7,13 @@
 
 <body class="{{body_class}}" data-template="base.twig">
 
-{% include 'modules/header/header.twig' %}
+{% include 'partials/header/header.twig' %}
 
+{% block content %}
+{% endblock %}
 
 {% block footer %}
-  {% include 'modules/footer/footer.twig' %}
+  {% include 'partials/footer/footer.twig' %}
   {{ function('wp_footer') }}
 {% endblock %}
 </body>
