@@ -1,0 +1,488 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e4272c3f0c0a8d2ae2024b3d61b27efd",
+    "packages": [
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-pro",
+            "version": "5.6.10",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.6.10",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "^1.0",
+                "philippbaschke/acf-pro-installer": "^1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "^4.8.36"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "time": "2018-08-27T06:10:37+00:00"
+        },
+        {
+            "name": "hingst/layotter",
+            "version": "1.5.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hingst/layotter.git",
+                "reference": "origin/master"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "johnpbloch/wordpress",
+            "version": "5.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress.git",
+                "reference": "516609b5bc19b1dd7cff9f9b4e9d1026363049ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/516609b5bc19b1dd7cff9f9b4e9d1026363049ce",
+                "reference": "516609b5bc19b1dd7cff9f9b4e9d1026363049ce",
+                "shasum": ""
+            },
+            "require": {
+                "johnpbloch/wordpress-core": "5.0.3",
+                "johnpbloch/wordpress-core-installer": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2019-01-09T18:42:21+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core",
+            "version": "5.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core.git",
+                "reference": "76c8acab20262adc0eb70d20aace3d36c2f3a16f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/76c8acab20262adc0eb70d20aace3d36c2f3a16f",
+                "reference": "76c8acab20262adc0eb70d20aace3d36c2f3a16f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "provide": {
+                "wordpress/core-implementation": "5.0.3"
+            },
+            "type": "wordpress-core",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2019-01-09T18:42:15+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core-installer",
+            "version": "1.0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/7941acd71725710a789daabe0557429da63e7ac6",
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "conflict": {
+                "composer/installers": "<1.0.6"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": ">=4.8.35"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "johnpbloch\\Composer\\WordPressCorePlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "johnpbloch\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John P. Bloch",
+                    "email": "me@johnpbloch.com"
+                }
+            ],
+            "description": "A custom installer to handle deploying WordPress with composer",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2018-01-29T14:49:29+00:00"
+        },
+        {
+            "name": "philippbaschke/acf-pro-installer",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhilippBaschke/acf-pro-installer.git",
+                "reference": "f18e537183958159ef5f6cb1f5b684f59d55f3eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhilippBaschke/acf-pro-installer/zipball/f18e537183958159ef5f6cb1f5b684f59d55f3eb",
+                "reference": "f18e537183958159ef5f6cb1f5b684f59d55f3eb",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.5",
+                "vlucas/phpdotenv": "^2.2"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*",
+                "phpunit/phpunit": "4.8.*",
+                "satooshi/php-coveralls": "1.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "PhilippBaschke\\ACFProInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhilippBaschke\\ACFProInstaller\\": "src/ACFProInstaller"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philipp Baschke",
+                    "email": "philipp@baschke.com"
+                }
+            ],
+            "description": "An install helper for Advanced Custom Fields PRO",
+            "keywords": [
+                "acf",
+                "composer",
+                "env",
+                "plugin",
+                "pro",
+                "wordpress",
+                "wp"
+            ],
+            "time": "2016-07-20T10:19:36+00:00"
+        },
+        {
+            "name": "tracy/tracy",
+            "version": "v2.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tracy.git",
+                "reference": "35fa649b483b28e16f61de07110ea0585fc8d6ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/35fa649b483b28e16f61de07110ea0585fc8d6ea",
+                "reference": "35fa649b483b28e16f61de07110ea0585fc8d6ea",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-session": "*",
+                "php": ">=5.4.4"
+            },
+            "require-dev": {
+                "nette/di": "~2.3",
+                "nette/tester": "~1.7",
+                "nette/utils": "~2.3"
+            },
+            "suggest": {
+                "https://nette.org/donate": "Please support Tracy via a donation"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/shortcuts.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "😎 Tracy: the addictive tool to ease debugging PHP code for cool developers. Friendly design, logging, profiler, advanced features like debugging AJAX calls or CLI support. You will love it.",
+            "homepage": "https://tracy.nette.org",
+            "keywords": [
+                "Xdebug",
+                "debug",
+                "debugger",
+                "nette",
+                "profiler"
+            ],
+            "time": "2018-11-05T15:10:59+00:00"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "cfd5dc225767ca154853752abc93aeec040fcf36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/cfd5dc225767ca154853752abc93aeec040fcf36",
+                "reference": "cfd5dc225767ca154853752abc93aeec040fcf36",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2018-10-30T17:29:25+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/timber-library",
+            "version": "1.8.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/timber-library/",
+                "reference": "tags/1.8.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/timber-library.1.8.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/timber-library/"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0"
+    },
+    "platform-dev": []
+}
