@@ -59,6 +59,8 @@ gulp.task('scripts', function(done){
     done();
 });
 
+gulp.task('build', gulp.series(['styles-minified', 'scripts']));
+
 gulp.task('watch', function() {
     gulp.watch('../src/**/*.scss', gulp.series('styles-minified'));
     gulp.watch('../src/**/*.js', gulp.series('scripts'));
